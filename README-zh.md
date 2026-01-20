@@ -58,7 +58,7 @@
 #### A. 飞书机器人 (Lark Bot)
 1. 在飞书群聊中添加**自定义机器人**，获取 **Webhook URL**。
 2. 打开 `data/lark_card.json` 文件，复制全部内容。
-3. 进入飞书 [消息卡片搭建工具](https://open.feishu.cn/tool/cardbuilder)。
+3. 进入飞书 [消息卡片搭建工具](https://open.feishu.cn/cardkit)。
 4. 粘贴 JSON 内容，保存并发布，获取 **Template ID**。
 
 #### B. 邮件通知 (Email)

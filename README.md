@@ -56,7 +56,7 @@ Required for both GitHub Actions and Local Run.
 #### A. Lark Bot
 1. Add a **Custom Bot** in your Lark group chat and get the **Webhook URL**.
 2. Open `data/lark_card.json` and copy its content.
-3. Go to Lark [Message Card Builder](https://open.feishu.cn/tool/cardbuilder).
+3. Go to Lark [Message Card Builder](https://open.feishu.cn/cardkit).
 4. Paste the JSON, Save, and Publish to get the **Template ID**.
 
 #### B. Email Notification
