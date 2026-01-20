@@ -122,9 +122,19 @@ class Settings(BaseSettings):
         if arxiv_data:
             settings_kwargs['arxiv'] = ArxivConfig(**arxiv_data)
 
-        # Clean up empty env vars to avoid pydantic validation error on optional fields
+        # Helper: Clean up empty env vars or partial config to avoid pydantic validation error
+        # 1. Remove empty values
         for key in list(os.environ.keys()):
-            if key.startswith("ARXIV_EMAIL__") and not os.environ[key].strip():
-                del os.environ[key]
+             # If env var is empty string, remove it (GitHub Actions case for empty secrets)
+             if key.startswith("ARXIV_") and not os.environ[key].strip():
+                 del os.environ[key]
+
+        # 2. If SENDER_EMAIL is missing (meaning user didn't config email), 
+        #    we must remove ALL ARXIV_EMAIL__ vars (like SMTP_SERVER which might be hardcoded in workflow)
+        #    to prevent Pydantic from trying to instantiate partial EmailConfig.
+        if "ARXIV_EMAIL__SENDER_EMAIL" not in os.environ:
+             for key in list(os.environ.keys()):
+                 if key.startswith("ARXIV_EMAIL__"):
+                     del os.environ[key]
 
         return cls(**settings_kwargs)
