@@ -37,7 +37,7 @@ jobs:
         ARXIV_EMAIL__SMTP_PORT: 587
         ARXIV_ARXIV__ENABLE_DEEP_SCAN: "true" # Or toggle via var
       run: |
-        uv run axvbot
+        uv run axvbot --use-llm --deep-scan
 
 
     - name: Commit and Push changes
