@@ -122,4 +122,9 @@ class Settings(BaseSettings):
         if arxiv_data:
             settings_kwargs['arxiv'] = ArxivConfig(**arxiv_data)
 
+        # Clean up empty env vars to avoid pydantic validation error on optional fields
+        for key in list(os.environ.keys()):
+            if key.startswith("ARXIV_EMAIL__") and not os.environ[key].strip():
+                del os.environ[key]
+
         return cls(**settings_kwargs)
