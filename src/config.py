@@ -12,7 +12,7 @@ class LLMConfig(BaseModel):
 class LarkConfig(BaseModel):
     webhook_url: str = Field(..., description="Feishu(Lark) Bot Webhook URL")
     template_id: str = Field(..., description="Card Template ID")
-    template_version_name: str = "1.0.0"
+    template_version: str = "1.0.0"
 
 class EmailConfig(BaseModel):
     smtp_server: str = "smtp.gmail.com"
@@ -69,7 +69,7 @@ class Settings(BaseSettings):
             lark_data = {
                 "webhook_url": raw_config.get("webhook_url"),
                 "template_id": raw_config.get("template_id"),
-                "template_version_name": raw_config.get("template_version_name", "1.0.0")
+                "template_version": raw_config.get("template_version", "1.0.0")
             }
         
         email_data = None

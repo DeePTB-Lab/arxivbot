@@ -26,6 +26,7 @@ jobs:
       env:
         ARXIV_LARK__WEBHOOK_URL: ${{ secrets.LARK_WEBHOOK_URL }}
         ARXIV_LARK__TEMPLATE_ID: ${{ secrets.LARK_TEMPLATE_ID }}
+        ARXIV_LARK__TEMPLATE_VERSION: ${{ secrets.LARK_TEMPLATE_VERSION || '1.0.0' }}
         ARXIV_LLM__API_KEY: ${{ secrets.LLM_API_KEY }}
         ARXIV_LLM__BASE_URL: ${{ secrets.LLM_BASE_URL }}
         ARXIV_LLM__MODEL: ${{ secrets.LLM_MODEL }}

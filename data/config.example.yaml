@@ -8,7 +8,7 @@ webhook_url: 'https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_WEBHOOK_HERE'
 
 # Feishu(Lark) Card Template
 template_id: 'YOUR_TEMPLATE_ID_HERE'
-template_version_name: '1.0.0'
+template_version: '1.0.0'
 
 # ==================================== LLM Service Configuration ==================================== #
 model: 'DeepSeek-V3.2-Exp'

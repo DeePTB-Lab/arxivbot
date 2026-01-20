@@ -56,7 +56,7 @@ class LarkNotifier(BaseNotifier):
             "type": "template",
             "data": {
                 "template_id": self.config.template_id,
-                "template_version_name": self.config.template_version_name,
+                "template_version_name": self.config.template_version,
                 "template_variable": {
                     "today_date": today_date,
                     "tag": tag,

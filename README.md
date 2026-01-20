@@ -35,6 +35,7 @@ The easiest way to run ArXivToday without a local server.
     *   Click **New repository secret** and add the following (no need for `config.yaml`):
         *   `LARK_WEBHOOK_URL`: Webhook URL for Lark Bot
         *   `LARK_TEMPLATE_ID`: Lark Message Card Template ID
+        *   `LARK_TEMPLATE_VERSION`: (Optional) Template Version (default: `1.0.0`)
         *   `LLM_API_KEY`: API Key for your LLM
         *   `LLM_BASE_URL`: Base URL for LLM
         *   `LLM_MODEL`: Model name (e.g. `gpt-4o`, `deepseek-chat`)

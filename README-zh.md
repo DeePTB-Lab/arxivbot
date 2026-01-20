@@ -37,6 +37,7 @@
     *   点击 **New repository secret**，添加以下变量 (无需 `config.yaml` 文件):
         *   `LARK_WEBHOOK_URL`: 飞书机器人 Webhook 地址
         *   `LARK_TEMPLATE_ID`: 飞书消息卡片 Template ID
+        *   `LARK_TEMPLATE_VERSION`: 飞书消息卡片 Template Version (default: `1.0.0`)
         *   `LLM_API_KEY`: LLM 的 API Key
         *   `LLM_BASE_URL`: LLM 的 Base URL
         *   `LLM_MODEL`: 模型名称 (如 `gpt-4o`, `deepseek-chat`)
