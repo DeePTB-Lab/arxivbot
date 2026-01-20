@@ -105,9 +105,21 @@ class Settings(BaseSettings):
         # Pydantic Settings will merge arguments with Env Vars. 
         # So we should pass what we have from YAML.
         
-        return cls(
-            lark=LarkConfig(**lark_data) if lark_data else None,
-            email=EmailConfig(**email_data) if email_data else None,
-            arxiv=ArxivConfig(**arxiv_data),
-            llm=LLMConfig(**llm_data)
-        )
+        settings_kwargs = {}
+        
+        # Only pass explicit objects if we actually extracted data from YAML.
+        # Otherwise, let BaseSettings load from Environment Variables.
+        if lark_data:
+            settings_kwargs['lark'] = LarkConfig(**lark_data)
+            
+        if email_data:
+            settings_kwargs['email'] = EmailConfig(**email_data)
+            
+        if llm_data:
+            settings_kwargs['llm'] = LLMConfig(**llm_data)
+            
+        # Arxiv data is likely present from paper.yaml, but we treat it similarly
+        if arxiv_data:
+            settings_kwargs['arxiv'] = ArxivConfig(**arxiv_data)
+
+        return cls(**settings_kwargs)
