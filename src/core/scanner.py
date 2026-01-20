@@ -71,32 +71,58 @@ class ArxivContentScanner:
 
                 # Simple heuristic: largest tex file or one with \begin{document}
                 main_tex_content = ""
-                # Priority 1: Check for \begin{document}
+                
+                # Sort files for determinism
+                tex_files.sort()
+
+                candidate_files = []
+                
+                # Pass 1: Find all files with \begin{document}
                 for tex_file in tex_files:
                     try:
                         with open(tex_file, 'r', errors='ignore') as f:
                             content = f.read()
                             if "\\begin{document}" in content:
-                                main_tex_content = content
-                                logger.info(f"Found main tex file with \\begin{{document}}: {os.path.basename(tex_file)}")
-                                break
+                                candidate_files.append((tex_file, content))
                     except Exception as e:
                         logger.warning(f"Error reading {tex_file}: {e}")
                         continue
                 
-                # Priority 2: Largest file if no document env found
-                if not main_tex_content and tex_files:
+                logger.info(f"Found {len(candidate_files)} candidate files with \\begin{{document}}.")
+
+                # Pass 2: Select the best candidate
+                # Priority: Contains "\section{Introduction}" -> Largest size
+                best_candidate_content = None
+                
+                for fname, content in candidate_files:
+                    # Check for Introduction (roughly)
+                    if re.search(r'\\section\{{\s*Introduction', content, re.IGNORECASE):
+                        logger.info(f"Selected {os.path.basename(fname)} (contains Introduction).")
+                        best_candidate_content = content
+                        break
+                
+                # Fallback: If no Introduction found, pick the largest candidate (likely the main paper)
+                if not best_candidate_content and candidate_files:
+                    # Sort by length of content (proxy for file size)
+                    candidate_files.sort(key=lambda x: len(x[1]), reverse=True)
+                    best_candidate_content = candidate_files[0][1]
+                    logger.info(f"Selected {os.path.basename(candidate_files[0][0])} by size (fallback).")
+
+                # Fallback 2: If no \\begin{document} found at all, try largest .tex file
+                if not best_candidate_content and tex_files:
                     try:
                         largest_file = max(tex_files, key=os.path.getsize)
                         logger.info(f"No \\begin{{document}} found, using largest file: {os.path.basename(largest_file)}")
                         with open(largest_file, 'r', errors='ignore') as f:
-                            main_tex_content = f.read()
+                            best_candidate_content = f.read()
                     except Exception as e:
                         logger.error(f"Error reading largest file: {e}")
 
-                if not main_tex_content:
+                if not best_candidate_content:
                     logger.warning("Could not identify main .tex content.")
                     return None, None
+                
+                main_tex_content = best_candidate_content
 
                 # Regex extraction (Simplified)
                 # Remove comments
