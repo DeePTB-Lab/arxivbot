@@ -1,0 +1,23 @@
+# Configuration Template
+# COPY THIS FILE TO 'data/config.yaml' AND FILL IN YOUR DETAILS.
+# DO NOT COMMIT 'data/config.yaml' TO GIT IF IT CONTAINS SECRETS.
+
+# ==================================== Feishu(Lark) Configuration ==================================== #
+# Feishu(Lark) Bot Webhook URL
+webhook_url: 'https://open.feishu.cn/open-apis/bot/v2/hook/YOUR_WEBHOOK_HERE'
+
+# Feishu(Lark) Card Template
+template_id: 'YOUR_TEMPLATE_ID_HERE'
+template_version_name: '1.0.0'
+
+# ==================================== LLM Service Configuration ==================================== #
+model: 'DeepSeek-V3.2-Exp'
+base_url: 'https://llmapi.paratera.com/v1'
+api_key: 'YOUR_API_KEY_HERE'
+
+# ==================================== Email Configuration (Optional) ==================================== #
+# sender_email: 'your_email@gmail.com'
+# sender_password: 'your_app_password'
+# receiver_email: 'receiver@email.com'
+# smtp_server: 'smtp.gmail.com'
+# smtp_port: 587

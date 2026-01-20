@@ -1,0 +1,39 @@
+# ==================================== Paper Configuration ==================================== #
+# This file contains PUBLIC configuration for paper searching (Categories, Keywords).
+
+
+tag: 'AI Physics'
+
+category_list:
+  - cond-mat.mtrl-sci    # Materials Science
+
+keyword_list:
+  - Machine Learning
+  - Deep Learning
+  - Neural Network
+  - AI for Science
+  - Scientific Machine Learning
+  - Graph Neural Network
+  - GNN
+  - Transformer
+  - Generative Model
+  - Representation Learning
+  - Self-Supervised
+  - Equivariant
+  - E(3)
+  - SE(3)
+  - Interatomic Potential
+  - Hamiltonian
+  - Density Functional Theory
+  - DFT
+  - Tight-Binding
+  - TB
+  - Quantum Transport
+  - Non-Equilibrium Green's Function
+  - NEGF
+  - Molecular Dynamics
+  - MD
+  - Inverse Design
+  - Materials Discovery
+  - Property Prediction
+

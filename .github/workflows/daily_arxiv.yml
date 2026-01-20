@@ -1,0 +1,48 @@
+name: Daily ArXiv Bot
+
+on:
+  schedule:
+    # Runs at 00:00 UTC (08:00 Beijing Time) every day
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+
+    - name: Install dependencies
+      run: |
+        uv sync --all-extras --dev
+
+
+    - name: Run ArXiv Bot
+      env:
+        ARXIV_LARK__WEBHOOK_URL: ${{ secrets.LARK_WEBHOOK_URL }}
+        ARXIV_LARK__TEMPLATE_ID: ${{ secrets.LARK_TEMPLATE_ID }}
+        ARXIV_LLM__API_KEY: ${{ secrets.LLM_API_KEY }}
+        ARXIV_LLM__BASE_URL: ${{ secrets.LLM_BASE_URL }}
+        ARXIV_LLM__MODEL: ${{ secrets.LLM_MODEL }}
+        ARXIV_EMAIL__SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+        ARXIV_EMAIL__SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+        ARXIV_EMAIL__RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        ARXIV_EMAIL__SMTP_SERVER: "smtp.gmail.com" # Or use a secret if variable
+        ARXIV_EMAIL__SMTP_PORT: 587
+        ARXIV_ARXIV__ENABLE_DEEP_SCAN: "true" # Or toggle via var
+      run: |
+        uv run axvbot
+
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add data/paper_history.json
+        git commit -m "Update papers history [skip ci]" || echo "No changes to commit"
+        git push

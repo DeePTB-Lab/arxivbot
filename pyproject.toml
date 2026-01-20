@@ -1,0 +1,32 @@
+[project]
+name = "arxivbot"
+version = "0.1.0"
+description = "ArXiv Bot with Lark, Email, and LLM support"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "arxiv",
+    "pyyaml",
+    "openai",
+    "tqdm",
+    "pydantic",
+    "pydantic-settings",
+    "loguru",
+    "email-validator",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+axvbot = "main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+]

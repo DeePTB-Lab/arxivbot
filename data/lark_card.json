@@ -1,0 +1,220 @@
+{
+    "name": "ArXivToday",
+    "dsl": {
+        "config": {
+            "update_multi": true
+        },
+        "i18n_elements": {
+            "zh_cn": [
+                {
+                    "tag": "markdown",
+                    "content": "今日 ArXiv 更新 | 为您精选 **${total_paper}** 篇相关论文 👇",
+                    "text_align": "left",
+                    "text_size": "normal"
+                },
+                {
+                    "tag": "table",
+                    "columns": [
+                        {
+                            "data_type": "number",
+                            "name": "index",
+                            "display_name": "序号",
+                            "horizontal_align": "right",
+                            "width": "10%",
+                            "format": {
+                                "precision": 0
+                            }
+                        },
+                        {
+                            "data_type": "text",
+                            "name": "title",
+                            "display_name": "论文标题",
+                            "horizontal_align": "left",
+                            "width": "auto"
+                        },
+                        {
+                            "data_type": "lark_md",
+                            "name": "url",
+                            "display_name": "链接",
+                            "horizontal_align": "left",
+                            "width": "auto"
+                        }
+                    ],
+                    "rows": "${table_rows}",
+                    "row_height": "low",
+                    "header_style": {
+                        "background_style": "grey",
+                        "bold": true,
+                        "lines": 1
+                    },
+                    "page_size": 10
+                },
+                {
+                    "tag": "repeat",
+                    "variable": "paper_list",
+                    "elements": [
+                        {
+                            "tag": "markdown",
+                            "content": "${paper_list.counter}. ${paper_list.title}",
+                            "text_align": "left",
+                            "text_size": "heading",
+                            "icon": {
+                                "tag": "standard_icon",
+                                "token": "file-form_colorful",
+                                "color": "blue"
+                            }
+                        },
+                        {
+                            "tag": "markdown",
+                            "content": "- <text_tag color='yellow'>${paper_list.published}</text_tag> <text_tag color='green'>arXiv ID: ${paper_list.id}</text_tag>\n- <link icon='file-link-pdf_outlined' url='${paper_list.url}'> ${paper_list.url}</link>",
+                            "text_align": "left",
+                            "text_size": "notation"
+                        },
+                        {
+                            "tag": "markdown",
+                            "content": "**摘要**\n${paper_list.abstract}\n\n${paper_list.zh_abstract}",
+                            "text_align": "left",
+                            "text_size": "normal"
+                        },
+                        {
+                            "tag": "markdown",
+                            "content": "💡 **深度解读**\n${paper_list.deep_summary}",
+                            "text_align": "left",
+                            "text_size": "normal"
+                        },
+                        {
+                            "tag": "hr"
+                        }
+                    ]
+                }
+            ]
+        },
+        "i18n_header": {
+            "zh_cn": {
+                "title": {
+                    "tag": "plain_text",
+                    "content": "ArXiv ${today_date}"
+                },
+                "subtitle": {
+                    "tag": "plain_text",
+                    "content": ""
+                },
+                "template": "wathet",
+                "ud_icon": {
+                    "tag": "standard_icon",
+                    "token": "ai-common_colorful"
+                }
+            }
+        }
+    },
+    "variables": [
+        {
+            "type": "text",
+            "apiName": "var_m30b6mn6",
+            "name": "today_date",
+            "desc": "今日日期",
+            "mockData": "2024-10-31"
+        },
+        {
+            "type": "text",
+            "apiName": "var_m30b6mof",
+            "name": "tag",
+            "desc": "论文tag",
+            "mockData": "AI+Physics"
+        },
+        {
+            "apiName": "variable_vao4f1n5xlj",
+            "type": "tableRowArray",
+            "name": "table_rows",
+            "desc": "表格生成的变量",
+            "mockData": [
+                {
+                    "index": 1,
+                    "title": "Paper Title",
+                    "url": "[http://arxiv.org/abs/2411.11451v1](http://arxiv.org/abs/2411.11451v1)"
+                },
+                {
+                    "index": 2,
+                    "title": "Paper Title",
+                    "url": "[http://arxiv.org/abs/2411.11451v1](http://arxiv.org/abs/2411.11451v1)"
+                }
+            ]
+        },
+        {
+            "apiName": "variable_btf4sfn5zn6",
+            "type": "objectArray",
+            "name": "paper_list",
+            "desc": "循环容器生成的变量",
+            "mockData": [
+                {
+                    "counter": 1,
+                    "title": "This is the Paper Title",
+                    "id": "2411.11451",
+                    "abstract": "This is the Abstract of the paper.",
+                    "url": "http://arxiv.org/abs/2411.11451v1",
+                    "published": "2024-11-02",
+                    "zh_abstract": "这是这篇文章的摘要。",
+                    "deep_summary": "这是一段由 AI 生成的深度解读示例。"
+                }
+            ],
+            "structDescriptions": [
+                {
+                    "type": "integer",
+                    "name": "counter",
+                    "desc": "计数器",
+                    "apiName": "var_xbszgj43p0q"
+                },
+                {
+                    "type": "text",
+                    "name": "title",
+                    "desc": "论文标题",
+                    "apiName": "var_7scnb2qnnj2"
+                },
+                {
+                    "type": "text",
+                    "name": "id",
+                    "desc": "论文 arXiv ID",
+                    "apiName": "var_uol2sndj1ea"
+                },
+                {
+                    "type": "text",
+                    "name": "abstract",
+                    "desc": "论文摘要",
+                    "apiName": "var_6ngeta033uu"
+                },
+                {
+                    "type": "text",
+                    "name": "url",
+                    "desc": "论文链接",
+                    "apiName": "var_ddz675b4m2e"
+                },
+                {
+                    "type": "text",
+                    "name": "published",
+                    "desc": "论文日期",
+                    "apiName": "var_vsmjbsnms6d"
+                },
+                {
+                    "type": "text",
+                    "name": "zh_abstract",
+                    "desc": "论文中文摘要",
+                    "apiName": "var_9kxh9165bq"
+                },
+                {
+                    "type": "text",
+                    "name": "deep_summary",
+                    "desc": "Deep Summary",
+                    "apiName": "var_deep_summary"
+                }
+            ]
+        },
+        {
+            "type": "integer",
+            "apiName": "var_m3164zpl",
+            "name": "total_paper",
+            "desc": "论文总数",
+            "mockData": 7
+        }
+    ]
+}
+
