@@ -29,38 +29,73 @@ class ArxivContentScanner:
                 client = arxiv.Client()
                 # Must search to get the result object to download
                 search = arxiv.Search(id_list=[arxiv_id])
-                result = next(client.results(search))
+                try:
+                    result = next(client.results(search))
+                except StopIteration:
+                    logger.error(f"Arxiv ID {arxiv_id} not found.")
+                    return None, None
                 
-                # Download tarball
-                tar_path = result.download_source(dirpath=tmpdirname)
+                logger.info(f"Downloading source for {arxiv_id}...")
+                try:
+                    tar_path = result.download_source(dirpath=tmpdirname)
+                    logger.info(f"Source downloaded to {tar_path}")
+                except Exception as e:
+                    logger.warning(f"Failed to download source for {arxiv_id}: {e}")
+                    return None, None
                 
                 # Extract
                 if not tarfile.is_tarfile(tar_path):
                     logger.warning(f"{arxiv_id} source is not a tarfile (maybe PDF only).")
                     return None, None
                 
-                with tarfile.open(tar_path) as tar:
-                    tar.extractall(path=tmpdirname)
-                
-                # Find main .tex file
-                tex_files = [f for f in os.listdir(tmpdirname) if f.endswith('.tex')]
-                if not tex_files:
+                try:
+                    with tarfile.open(tar_path) as tar:
+                        tar.extractall(path=tmpdirname)
+                        logger.info(f"Extracted tarball to {tmpdirname}")
+                except Exception as e:
+                    logger.error(f"Failed to extract tarball: {e}")
                     return None, None
                 
+                # Find main .tex file (Recursive)
+                tex_files = []
+                for root, dirs, files in os.walk(tmpdirname):
+                    for file in files:
+                        if file.endswith('.tex'):
+                            tex_files.append(os.path.join(root, file))
+                
+                if not tex_files:
+                    logger.warning(f"No .tex files found in source for {arxiv_id}.")
+                    return None, None
+                
+                logger.info(f"Found {len(tex_files)} .tex files used for scanning.")
+
                 # Simple heuristic: largest tex file or one with \begin{document}
                 main_tex_content = ""
+                # Priority 1: Check for \begin{document}
                 for tex_file in tex_files:
-                    with open(os.path.join(tmpdirname, tex_file), 'r', errors='ignore') as f:
-                        content = f.read()
-                        if "\\begin{document}" in content:
-                            main_tex_content = content
-                            break
+                    try:
+                        with open(tex_file, 'r', errors='ignore') as f:
+                            content = f.read()
+                            if "\\begin{document}" in content:
+                                main_tex_content = content
+                                logger.info(f"Found main tex file with \\begin{{document}}: {os.path.basename(tex_file)}")
+                                break
+                    except Exception as e:
+                        logger.warning(f"Error reading {tex_file}: {e}")
+                        continue
                 
+                # Priority 2: Largest file if no document env found
                 if not main_tex_content and tex_files:
-                     with open(os.path.join(tmpdirname, tex_files[0]), 'r', errors='ignore') as f:
-                        main_tex_content = f.read()
+                    try:
+                        largest_file = max(tex_files, key=os.path.getsize)
+                        logger.info(f"No \\begin{{document}} found, using largest file: {os.path.basename(largest_file)}")
+                        with open(largest_file, 'r', errors='ignore') as f:
+                            main_tex_content = f.read()
+                    except Exception as e:
+                        logger.error(f"Error reading largest file: {e}")
 
                 if not main_tex_content:
+                    logger.warning("Could not identify main .tex content.")
                     return None, None
 
                 # Regex extraction (Simplified)
@@ -69,6 +104,11 @@ class ArxivContentScanner:
                 
                 intro = self._find_section(main_tex_content, "Introduction")
                 conclusion = self._find_section(main_tex_content, "Conclusion")
+                
+                if not intro and not conclusion:
+                    logger.warning(f"Deep scan extraction failed: No Intro/Conclusion found in {arxiv_id}")
+                else:
+                    logger.info(f"Deep scan success: Intro({len(intro) if intro else 0} chars), Conc({len(conclusion) if conclusion else 0} chars)")
                 
                 return intro, conclusion
 
