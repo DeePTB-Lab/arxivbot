@@ -1,16 +1,5 @@
 [
     {
-        "id": "2601.10938",
-        "title": "Are Universal Potentials Ready for Alkali-Ion Battery Kinetics?",
-        "abstract": "Accelerating alkali-ion battery discovery requires accurate modeling of atomic-scale kinetics, yet the reliability of universal machine learning interatomic potentials (uMLIPs) in capturing these high-energy landscapes remains uncertain. Here, we systematically benchmark state-of-the-art uMLIPs, including M3GNet, CHGNet, MACE, SevenNet, GRACE, and Orb, against DFT baselines for cathodes and solid electrolytes. We find that the Orb-v3 family excels in static migration barrier predictions (MAE $\\approx$ 75--111 meV), driven primarily by architectural refinements. Conversely, for dynamic transport, the GRACE model trained on the OMat24 dataset demonstrates superior fidelity in reproducing ion diffusivities and structural correlations. Our results reveal that while architectural sophistication (e.g., equivariance) is beneficial, the inclusion of high-temperature, non-equilibrium training data is the dominant driver of kinetic accuracy. These findings establish that modern uMLIPs are sufficiently robust to serve as zero-shot surrogates for high-throughput kinetic screening of next-generation energy storage materials.",
-        "url": "http://arxiv.org/abs/2601.10938v1",
-        "published": "2026-01-16",
-        "zh_abstract": "加速碱金属离子电池研发需要精确的原子尺度动力学建模，然而通用机器学习原子间势能（uMLIPs）在捕捉高能态势能面方面的可靠性仍存疑问。本研究系统评估了M3GNet、CHGNet、MACE、SevenNet、GRACE和Orb等前沿uMLIPs模型相对于DFT基准在正极材料与固体电解质中的表现。研究发现：Orb-v3系列在静态迁移势垒预测中表现卓越（MAE≈75-111 meV），这主要得益于其架构优化；而在动态传输方面，基于OMat24数据集训练的GRACE模型在重现离子扩散系数与结构相关性方面具有最优保真度。结果表明：虽然架构复杂性（如等变性）具有增益作用，但包含高温非平衡训练数据才是提升动力学精度的主导因素。这些发现证实现代uMLIPs具备足够的鲁棒性，可作为新一代储能材料高通量动力学筛选的零样本替代模型。",
-        "introduction": null,
-        "conclusion": null,
-        "deep_summary": null
-    },
-    {
         "id": "2601.11509",
         "title": "Predictive autoencoder-transformer model of Cu oxidation state from EELS and XAS spectra",
         "abstract": "X-ray absorption spectroscopy (XAS) and electron energy-loss spectroscopy (EELS) produce detailed information about oxidation state, bonding, and coordination, making them essential for quantitative studies of redox and structure in functional materials. However, high-throughput quantitative analysis of these spectra, especially for mixed valence materials, remains challenging as diverse experimental conditions introduce noise, misalignment, broadening of the spectral features. We address this challenge by training a machine learning model consisting of an autoencoder to standardize the spectra and a transformer model to predict both Cu oxidation state and Bader charge directly from L-edge spectra. The model is trained on a large dataset of FEFF-simulated spectra and evaluates model performance on both simulated and experimental data. The results of the machine learning model exhibit highly accurate prediction across the domains of simulated and experimental XAS as well as experimental EELS. These advances enable future quantitative analysis of Cu redox processes under in situ and operando conditions.",
