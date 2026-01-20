@@ -5,7 +5,14 @@
 tag: 'AI Physics'
 
 category_list:
-  - cond-mat.mtrl-sci    # Materials Science
+  - cond-mat.mtrl-sci    # Materials Science (核心)
+  - cond-mat.mes-hall    # Mesoscale and Nanoscale Physics (二维材料/输运)
+  - cond-mat.str-el      # Strongly Correlated Electrons (电子结构)
+  - cond-mat.dis-nn      # Disordered Systems and Neural Networks (特定体系)
+  - physics.comp-ph      # Computational Physics (最重要补充: 计算方法/模拟)
+  - physics.chem-ph      # Chemical Physics (重要补充: ML势函数/分子模拟)
+  - cs.LG                # Machine Learning (核心)
+  - quant-ph             # Quantum Physics (量子体系/算法)
 
 keyword_list:
   - Machine Learning
