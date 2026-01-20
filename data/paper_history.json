@@ -1,5 +1,38 @@
 [
     {
+        "id": "2601.10368",
+        "title": "Topology-Directed Silicide Formation: An Explanation for the Growth of C49-TiSi$_2$ on the Si(100) Surface",
+        "abstract": "Designing metal-semiconductor junctions is essential for optimizing the performance of modern nanoelectronic devices. A widely used material is TiSi$_2$, which combines low electronic resistivity with good endurance. However, its multitude of polymorphs continues to pose a challenge for device fabrication. In particular, the naturally occurring formation of the metastable C49-TiSi$_2$ modification remains poorly understood and is problematic due to its unfavorable electronic properties. Based on extensive DFT calculations, we present a comprehensive model of Ti adsorption on Si(100) that highlights the pivotal role of surface topology for the initial stages of the interfacial TiSi$_2$ formation process. We show that the interplay between Si surface dimers, the symmetry of the Si(100) surface, and the incorporation of Ti adsorbates below the surface drives an adsorption pattern that yields a nucleation template for the C49-TiSi$_2$ phase. Our atomistic model rationalizes experimental observations like the Stranski-Krastanov growth mode, the preferential formation of C49-TiSi$_2$ despite it being less favorable than the competing C54 phase, and why disruption of the surface structure restores thermodynamically driven growth of the latter. Ultimately, this novel perspective on the unique growth of TiSi$_2$ will help to pave the way for next-generation electronic devices.",
+        "url": "http://arxiv.org/abs/2601.10368v1",
+        "published": "2026-01-15",
+        "zh_abstract": null,
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.09705",
+        "title": "Revisiting Jahn--Teller Transitions in Correlated Oxides with Monte Carlo Modeling",
+        "abstract": "Jahn--Teller (JT) distortions are a key driver of physical properties in many correlated oxide materials. Cooperative JT distortions, in which long-range orbital order reduces the symmetry of the average structure macroscopically, are common in JT-distorted materials at low temperatures. This long-range order will often melt on heating, \\textit{via} a transition to a high-temperature state without long-range orbital order. The nature of this transition has been observed to vary with different materials depending on crystal structure; in LaMnO$_3$ the transition has generally been interpreted as order-disorder, whereas in layered nickelates $A$NiO$_2$ ($A$=Li,Na) there is a displacive transition. Alternatively, recent theoretical work has suggested that previous attributions of order-disorder may in fact be a consequence of phonon anharmonicity, rather than persistence of JT distortions, which would suggest that the displacive transition may be more common than currently believed. In this work, we run Monte Carlo simulations with a simple Hamiltonian which is modified to include terms dependent on the JT amplitude $ρ$, which is allowed to vary within the simulation \\textit{via} the Metropolis algorithm. Our simulations yield distributions of JT amplitudes consistent with displacive rather than order-disorder behaviour for both perovskites and layered nickelates, suggesting that displacive-like JT transitions may be more common than previously assumed in both perovskites and layered nickelates. We also find significant differences between the transition observed for perovskites compared with layered nickelates, which we attribute to differing extensivity of configurational entropy on the two lattices, showing the crucial role of lattice geometry in determining behaviour.",
+        "url": "http://arxiv.org/abs/2601.09705v2",
+        "published": "2026-01-14",
+        "zh_abstract": null,
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.09637",
+        "title": "Light-induced Magnetization by Quantum Geometry",
+        "abstract": "We propose a mechanism for the inverse Faraday and the inverse Cotton--Mouton effects arising from quantum geometry, characterized by the quantum metric quadrupole and the weighted quantum metric. Within a semiclassical framework based on the Boltzmann transport theory, we establish a general formalism describing light-induced magnetization in electronic systems as a second-order response to the electric field of light. Using continuum and tight-binding models, we discuss the symmetry constraints on these effects and estimate the magnitudes of the resulting magnetizations. Our results highlight a direct manifestation of quantum-geometric quantities in nonlinear magneto-optical responses and suggest a viable pathway for experimental detection.",
+        "url": "http://arxiv.org/abs/2601.09637v1",
+        "published": "2026-01-14",
+        "zh_abstract": null,
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2601.10938",
         "title": "Are Universal Potentials Ready for Alkali-Ion Battery Kinetics?",
         "abstract": "Accelerating alkali-ion battery discovery requires accurate modeling of atomic-scale kinetics, yet the reliability of universal machine learning interatomic potentials (uMLIPs) in capturing these high-energy landscapes remains uncertain. Here, we systematically benchmark state-of-the-art uMLIPs, including M3GNet, CHGNet, MACE, SevenNet, GRACE, and Orb, against DFT baselines for cathodes and solid electrolytes. We find that the Orb-v3 family excels in static migration barrier predictions (MAE $\\approx$ 75--111 meV), driven primarily by architectural refinements. Conversely, for dynamic transport, the GRACE model trained on the OMat24 dataset demonstrates superior fidelity in reproducing ion diffusivities and structural correlations. Our results reveal that while architectural sophistication (e.g., equivariance) is beneficial, the inclusion of high-temperature, non-equilibrium training data is the dominant driver of kinetic accuracy. These findings establish that modern uMLIPs are sufficiently robust to serve as zero-shot surrogates for high-throughput kinetic screening of next-generation energy storage materials.",
