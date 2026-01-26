@@ -1,5 +1,16 @@
 [
     {
+        "id": "2601.13902",
+        "title": "Determinants of Self-Interstitial Energetics in Refractory High-Entropy Alloys",
+        "abstract": "Self-interstitials play a central role in governing the mechanical and anti-irradiation properties of refractory high-entropy alloys (RHEAs), however, the prediction of interstitial formation energies (Ef) is formidable due to the chemically complex environments in RHEAs. Herein, we develop a framework based on the tight-binding model to quantify the effects of complex alloying and lattice distortion on Ef. Our scheme reveals that Ef is jointly determined by the average d-band center of RHEAs and the d-band width of interstitial sites. Notably, the d-band width mainly depends on the interatomic hopping matrix and atomic size-determined coordination number, which together make the metallic bonding around interstitials in RHEAs resemble the distance-dependence law of van der Waals forces. By capturing d-band coupling character, our descriptor describes both interstitial configurations within a universal framework. Our model reveals a new physical picture of interstitial formation, providing a useful tool for the design of high-performance RHEAs.",
+        "url": "http://arxiv.org/abs/2601.13902v1",
+        "published": "2026-01-20",
+        "zh_abstract": "自间隙原子在决定难熔高熵合金（RHEAs）的力学与抗辐照性能中起着核心作用，然而由于RHEAs中复杂的化学环境，间隙形成能（Ef）的预测极具挑战。本文基于紧束缚模型构建了一个理论框架，用于量化复杂合金化效应与晶格畸变对Ef的影响。我们的模型揭示Ef由RHEAs的平均d带中心与间隙位点的d带宽度共同决定。值得注意的是，d带宽度主要受原子间跳跃矩阵和原子尺寸配位数的共同调控，这使得RHEAs中间隙周围的金属键合特征类似于范德华力的距离依赖规律。通过捕捉d带耦合特性，我们的描述符可在统一框架内表征不同间隙构型。该模型揭示了间隙形成的新物理图像，为高性能RHEAs的设计提供了有效工具。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2601.15492",
         "title": "Equivariant Interatomic Potentials without Tensor Products",
         "abstract": "Foundational machine-learned interatomic potentials have emerged as powerful tools for atomistic simulations, promising near first-principles accuracy across diverse chemical spaces at a fraction of the cost of quantum-mechanical calculations. However, the most accurate equivariant architectures rely on Clebsch-Gordan tensor products whose computational cost scales steeply with angular resolution, creating a trade-off between model expressiveness and inference speed that ultimately limits practical applications. Here we introduce Geodite, an equivariant message-passing architecture that replaces tensor products while incorporating physical priors to ensure smooth, well-behaved potential energy surfaces. Trained on the Materials Project trajectories dataset of inorganic crystals, Geodite-MP achieves accuracy competitive with leading methods on benchmarks for materials stability prediction, thermal conductivity, phonon-derived properties, and nanosecond-scale molecular dynamics, while running $3\\text{--}5\\times$ faster than models performing similarly. By combining predictive accuracy, computational efficiency, and physicality, Geodite enables faster large-scale atomistic simulations and high-throughput screening that would otherwise be computationally prohibitive.",
