@@ -1,5 +1,60 @@
 [
     {
+        "id": "2601.22009",
+        "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
+        "abstract": "In this work, we present Multimodal Equivariant Inverse Design Network (MEIDNet), a framework that jointly learns structural information and materials properties through contrastive learning, while encoding structures via an equivariant graph neural network (EGNN). By combining generative inverse design with multimodal learning, our approach accelerates the exploration of chemical-structural space and facilitates the discovery of materials that satisfy predefined property targets. MEIDNet exhibits strong latent-space alignment with cosine similarity 0.96 by fusion of three modalities through cross-modal learning. Through implementation of curriculum learning strategies, MEIDNet achieves ~60 times higher learning efficiency than conventional training techniques. The potential of our multimodal approach is demonstrated by generating low-bandgap perovskite structures at a stable, unique, and novel (SUN) rate of 13.6 %, which are further validated by ab initio methods. Our inverse design framework demonstrates both scalability and adaptability, paving the way for the universal learning of chemical space across diverse modalities.",
+        "url": "http://arxiv.org/abs/2601.22009v1",
+        "published": "2026-01-29",
+        "zh_abstract": "在本研究中，我们提出多模态等变逆向设计网络（MEIDNet），该框架通过对比学习联合学习结构信息与材料特性，并采用等变图神经网络（EGNN）进行结构编码。通过将生成式逆向设计与多模态学习相结合，我们的方法加速了化学-结构空间的探索，促进了满足预设性能目标的材料发现。MEIDNet通过跨模态学习融合三种模态，在潜在空间实现了余弦相似度0.96的强对齐性。通过实施课程学习策略，MEIDNet的学习效率较传统训练技术提升约60倍。我们通过以13.6%的稳定-独特-新颖（SUN）比率生成低带隙钙钛矿结构，证明了多模态方法的潜力，这些结构已通过第一性原理计算验证。本逆向设计框架兼具可扩展性与适应性，为跨模态化学空间的通用学习开辟了新途径。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.21311",
+        "title": "Dynamically training machine-learning-based force fields for strongly anharmonic materials",
+        "abstract": "Machine learning (ML) force fields have emerged as a powerful tool for computing materials properties at finite temperatures, particularly in regimes where traditional phonon-based perturbation theories fail or cannot be extended beyond the harmonic approximation. These approaches offer accuracy comparable to ab initio molecular dynamics (MD), but at a fraction of the computational cost. However, their reliability critically depends on the quality and representativeness of the training data. In particular, static training datasets often lead to failure when the force field encounters previously unseen atomic configurations during MD simulations. In this work, we present a framework for dynamically training ML force fields and demonstrate its effectiveness across materials with varying degrees of anharmonicity, including cubic boron arsenide (c-BAs), silicon (Si), and tin selenide (SnSe). Our method builds on the conventional lattice dynamics expansion of total energy and incorporates Bayesian error estimation to guide adaptive data acquisition during simulation. Specifically, we show that trajectory-averaged Bayesian errors enable efficient and targeted exploration of the configuration space, significantly enhancing the robustness and transferability of the resulting force fields. We further demonstrate how Bayesian error estimation can be applied to determine the convergence of the dynamic training without requiring additional ab initio data. This proposed framework offers a practical and easily implementable scheme to improve the training process, which is the most critical step in developing reliable ML force fields.",
+        "url": "http://arxiv.org/abs/2601.21311v1",
+        "published": "2026-01-29",
+        "zh_abstract": "机器学习力场已成为在有限温度下计算材料性质的有力工具，尤其在传统基于声子的微扰理论失效或无法超越谐波近似范畴的体系中表现突出。该方法在保持与第一性原理分子动力学相当精度的同时，显著降低了计算成本。然而其可靠性高度依赖于训练数据的质量与代表性——当分子动力学模拟中出现训练集未涵盖的原子构型时，基于静态数据训练的力场往往会失效。本文提出动态训练机器学习力场的框架，并在具有不同非谐性程度的材料（包括立方砷化硼、硅和硒化锡）中验证其有效性。我们的方法基于传统晶格动力学总能展开式，引入贝叶斯误差估计来指导模拟过程中的自适应数据采集。研究表明，轨迹平均贝叶斯误差可实现构型空间的高效靶向探索，显著增强力场的鲁棒性与迁移能力。我们还演示了如何借助贝叶斯误差估计判定动态训练收敛性，而无需额外第一性原理数据。该框架为改进训练过程提供了实用且易于实施的方案，而训练过程的优化正是开发可靠机器学习力场最关键的环节。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.21103",
+        "title": "Accurate Thermophysical Properties of Water using Machine-Learned Potentials",
+        "abstract": "Simulating water from first principles remains a significant computational challenge due to the slow dynamics of the underlying system. Although machine-learned interatomic potentials (MLPs) can accelerate these simulations, they often fail to achieve the required level of accuracy for reliable uncertainty quantification. In this study, we use MACE - an equivariant graph neural network architecture that has been trained using an extensive RPBE-D3 database - to predict density isobars, diffusion constants, radial distribution functions, and melting points. Although equivariant MACE models are computationally more expensive than simpler architectures, such as kernel-based potentials (KbPs), their significantly lower total energy errors allow for reliable thermodynamic reweighting with minimal bias. Our results are consistent with those of previous studies using KbPs; however, equivariant models can be validated against the ground-truth density functional theory (DFT) ensemble, providing a critical advantage. These findings establish equivariant MLPs as robust and reliable tools for investigating the thermophysical properties of water with DFT-level accuracy.",
+        "url": "http://arxiv.org/abs/2601.21103v1",
+        "published": "2026-01-28",
+        "zh_abstract": "由于水系统动力学缓慢，基于第一性原理模拟水仍然是一个重大的计算挑战。虽然机器学习原子间势能（MLPs）可以加速这些模拟，但其精度往往难以达到可靠不确定性量化的要求。本研究采用MACE——一种通过扩展RPBE-D3数据库训练的等变图神经网络架构——来预测密度等压线、扩散系数、径向分布函数和熔点。尽管等变MACE模型的计算成本高于基于核的势能（KbPs）等简单架构，但其显著降低的总能量误差使得热力学重加权能够以最小偏差可靠实现。我们的结果与先前使用KbPs的研究一致，但等变模型可通过与真实密度泛函理论（DFT）系综进行验证，这提供了关键优势。这些发现确立了等变MLPs作为以DFT级别精度研究水热物理性质的稳健可靠工具。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.22123",
+        "title": "Learning Hamiltonian Flow Maps: Mean Flow Consistency for Large-Timestep Molecular Dynamics",
+        "abstract": "Simulating the long-time evolution of Hamiltonian systems is limited by the small timesteps required for stable numerical integration. To overcome this constraint, we introduce a framework to learn Hamiltonian Flow Maps by predicting the mean phase-space evolution over a chosen time span $Δt$, enabling stable large-timestep updates far beyond the stability limits of classical integrators. To this end, we impose a Mean Flow consistency condition for time-averaged Hamiltonian dynamics. Unlike prior approaches, this allows training on independent phase-space samples without access to future states, avoiding expensive trajectory generation. Validated across diverse Hamiltonian systems, our method in particular improves upon molecular dynamics simulations using machine-learned force fields (MLFF). Our models maintain comparable training and inference cost, but support significantly larger integration timesteps while trained directly on widely-available trajectory-free MLFF datasets.",
+        "url": "http://arxiv.org/abs/2601.22123v1",
+        "published": "2026-01-29",
+        "zh_abstract": "对哈密顿系统进行长时间演化模拟时，数值积分稳定性所要求的小步长会限制计算效率。为突破这一限制，我们提出了学习哈密顿流映射的框架，通过预测选定时间跨度$Δt$内的平均相空间演化量，实现超越经典积分器稳定性限制的大步长稳定更新。为此，我们为时间平均哈密顿动力学建立了平均流一致性条件。与现有方法不同，该框架仅需基于独立的相空间样本进行训练，无需获取未来状态，从而避免了昂贵的轨迹生成成本。在多个哈密顿系统中的验证表明，我们的方法特别改进了基于机器学习力场（MLFF）的分子动力学模拟。所提出的模型在保持相近训练和推理成本的同时，支持显著增大积分步长，且能直接使用广泛存在的无轨迹MLFF数据集进行训练。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.21985",
+        "title": "Elign: Equivariant Diffusion Model Alignment from Foundational Machine Learning Force Fields",
+        "abstract": "Generative models for 3D molecular conformations must respect Euclidean symmetries and concentrate probability mass on thermodynamically favorable, mechanically stable structures. However, E(3)-equivariant diffusion models often reproduce biases from semi-empirical training data rather than capturing the equilibrium distribution of a high-fidelity Hamiltonian. While physics-based guidance can correct this, it faces two computational bottlenecks: expensive quantum-chemical evaluations (e.g., DFT) and the need to repeat such queries at every sampling step. We present Elign, a post-training framework that amortizes both costs. First, we replace expensive DFT evaluations with a faster, pretrained foundational machine-learning force field (MLFF) to provide physical signals. Second, we eliminate repeated run-time queries by shifting physical steering to the training phase. To achieve the second amortization, we formulate reverse diffusion as a reinforcement learning problem and introduce Force--Energy Disentangled Group Relative Policy Optimization (FED-GRPO) to fine-tune the denoising policy. FED-GRPO includes a potential-based energy reward and a force-based stability reward, which are optimized and group-normalized independently. Experiments show that Elign generates conformations with lower gold-standard DFT energies and forces, while improving stability. Crucially, inference remains as fast as unguided sampling, since no energy evaluations are required during generation.",
+        "url": "http://arxiv.org/abs/2601.21985v1",
+        "published": "2026-01-29",
+        "zh_abstract": "面向三维分子构象的生成模型需遵循欧几里得对称性，并将概率质量集中于热力学有利、机械稳定的结构。然而，基于E(3)等变的扩散模型往往重现半经验训练数据中的偏差，而非捕捉高精度哈密顿量的平衡分布。虽然基于物理的引导能修正此问题，但其面临两个计算瓶颈：昂贵的量子化学计算（如DFT）以及需要在每个采样步骤重复此类查询。我们提出Elign——一种可分摊双重成本的后训练框架。首先，我们采用预训练的快速机器学习力场（MLFF）替代昂贵DFT计算以提供物理信号；其次，通过将物理引导移至训练阶段，消除运行时重复查询。为实现第二种成本分摊，我们将反向扩散构建为强化学习问题，并提出力-能量解耦分组相对策略优化（FED-GRPO）对去噪策略进行微调。FED-GRPO包含基于势函数的能量奖励和基于力的稳定性奖励，二者通过独立的分组归一化进行优化。实验表明，Elign生成的构象具有更低的金标准DFT能量与力，同时提升稳定性。关键的是，由于生成过程中无需能量评估，其推理速度与无引导采样相当。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2601.20836",
         "title": "Stripe antiferromagnetism and chiral superconductivity in tWSe$_2$",
         "abstract": "The layer-dependent Hamiltonians of parallel-stacked MoTe$_2$ and WSe$_2$ homobilayer moiré materials are topologically non-trivial, both in real space and in momentum space, and have been shown to support integer and fractional quantum anomalous Hall states, as well as antiferromagnetic and superconducting states. Here, we address the interplay between the antiferromagnetic and superconducting states observed in tWSe$_2$ when the Fermi level is close to its $M$-point van Hove singularity and the displacement field is small. We combine DFT with path-integrals to construct a minimal moiré band model that accounts for lattice relaxation along the $c$-axis and perform Hartree-Fock calculations to identify competing charge and spin ordered states. For tWSe$_2$ at $θ=2.7^\\circ$ and $θ=3.65^\\circ$, we find that a layer antiferromagnet (AFM), a stripe spin-density-wave (SDW), and the ferromagnetic Chern insulator (FM) are the primary candidates for the ground state at zero displacement field, and argue that antiferromagnetic spin interactions on the next neighbor bond $J_2$ can induce a time-reversal symmetry breaking chiral superconducting state.",
