@@ -1,5 +1,27 @@
 [
     {
+        "id": "2601.10534",
+        "title": "Topologically switchable transport in a bundled cable of wires",
+        "abstract": "Advances in the next generation of mesoscopic electronics require an understanding of topological phases in inhomogeneous media and the principles that govern them. Motivated by the nature of motifs available in printable conducting inks, we introduce and study quantum transport in a minimal model that describes a bundle of one-dimensional metallic wires that are randomly interconnected by semiconducting chains. Each of these interconnects is represented by a Su-Schrieffer-Heeger chain, which can reside in either a trivial or a topological phase. Using a tight-binding approach, we show that such a system can transit from an insulating phase to a robust metallic phase as the interconnects undergo a transition from a trivial to a topological phase. In the latter, despite the random interconnectedness, the metal evades Anderson localization and exhibits a ballistic conductance that scales linearly with the number of wires. We show that this behavior originates from hopping renormalization in the wire network. The zero-energy modes of the topological interconnects act as effective random dimers, giving rise to an energy-dependent localization length that diverges as $\\sim 1/E^2$. Our work establishes that random networks provide a yet-unexplored platform to host intriguing phases of topological quantum matter.",
+        "url": "http://arxiv.org/abs/2601.10534v1",
+        "published": "2026-01-15",
+        "zh_abstract": "下一代介观电子学的发展需要理解非均匀介质中的拓扑相及其支配原理。受可印刷导电油墨图案特性的启发，我们引入并研究了一个最小模型中的量子输运行为。该模型描述了由半导体链随机互连的一维金属线束，每个互连结构由处于平庸相或拓扑相的Su-Schrieffer-Heeger链表征。通过紧束缚方法计算，我们发现当互连结构从平庸相转变为拓扑相时，系统会从绝缘相过渡到稳健的金属相。在拓扑相中，尽管存在随机互连，金属态仍能规避安德森局域化，并展现出与线束数量呈线性关系的弹道电导。研究揭示该行为源于线束网络中的跳跃重整化——拓扑互连的零能模充当有效随机二聚体，产生按$\\sim 1/E^2$发散的能级依赖局域化长度。本工作证实随机网络为承载拓扑量子物质新奇相提供了尚未探索的研究平台。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2601.20950",
+        "title": "Parametric Quantum State Tomography with HyperRBMs",
+        "abstract": "Quantum state tomography (QST) is essential for validating quantum devices but suffers from exponential scaling in system size. Neural-network quantum states, such as Restricted Boltzmann Machines (RBMs), can efficiently parameterize individual many-body quantum states and have been successfully used for QST. However, existing approaches are point-wise and require retraining at every parameter value in a phase diagram. We introduce a parametric QST framework based on a hypernetwork that conditions an RBM on Hamiltonian control parameters, enabling a single model to represent an entire family of quantum ground states. Applied to the transverse-field Ising model, our HyperRBM achieves high-fidelity reconstructions from local Pauli measurements on 1D and 2D lattices across both phases and through the critical region. Crucially, the model accurately reproduces the fidelity susceptibility and identifies the quantum phase transition without prior knowledge of the critical point. These results demonstrate that hypernetwork-modulated neural quantum states provide an efficient and scalable route to tomographic reconstruction across full phase diagrams.",
+        "url": "http://arxiv.org/abs/2601.20950v1",
+        "published": "2026-01-28",
+        "zh_abstract": "量子态层析（QST）是验证量子器件的关键技术，但面临系统尺寸指数级增长的计算瓶颈。基于受限玻尔兹曼机（RBM）的神经网络量子态能够高效参数化多体量子态，已成功应用于QST任务。然而，现有方法属于逐点重建，需要在相图的每个参数点重新训练模型。我们提出一种基于超网络的参数化QST框架，通过哈密顿量控制参数调控RBM，使单一模型能表征整个量子基态族。在横场伊辛模型上的实验表明，我们的HyperRBM模型在一维和二维晶格中仅通过局域泡利测量，即可实现跨越双相区与临界区的高保真度重构。关键的是，该模型无需临界点先验知识即可精确复现保真度磁化率，并成功识别量子相变。这些结果证明，超网络调制的神经量子态为全相图层析重建提供了高效可扩展的解决方案。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2601.22009",
         "title": "MEIDNet: Multimodal generative AI framework for inverse materials design",
         "abstract": "In this work, we present Multimodal Equivariant Inverse Design Network (MEIDNet), a framework that jointly learns structural information and materials properties through contrastive learning, while encoding structures via an equivariant graph neural network (EGNN). By combining generative inverse design with multimodal learning, our approach accelerates the exploration of chemical-structural space and facilitates the discovery of materials that satisfy predefined property targets. MEIDNet exhibits strong latent-space alignment with cosine similarity 0.96 by fusion of three modalities through cross-modal learning. Through implementation of curriculum learning strategies, MEIDNet achieves ~60 times higher learning efficiency than conventional training techniques. The potential of our multimodal approach is demonstrated by generating low-bandgap perovskite structures at a stable, unique, and novel (SUN) rate of 13.6 %, which are further validated by ab initio methods. Our inverse design framework demonstrates both scalability and adaptability, paving the way for the universal learning of chemical space across diverse modalities.",
