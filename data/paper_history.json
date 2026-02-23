@@ -1,5 +1,27 @@
 [
     {
+        "id": "2602.18054",
+        "title": "Achieving Robust Extrapolation in Materials Property Prediction via Decoupled Transfer Learning",
+        "abstract": "Machine learning has revolutionized materials property prediction, yet fails catastrophically when extrapolating beyond training distributions-precisely the capability required for discovering unprecedented materials. Graph neural networks (GNNs) exhibit this collapse because end-to-end training fundamentally couples learned representations to target property distributions, preventing genuine extrapolation. We demonstrate that decoupled transfer learning-separating pretrained GNN feature extractors from simple regressors-overcomes this barrier. Pretrained features provide transferable structural knowledge, while simple regressors enable smooth extrapolation by maintaining learned trends beyond training boundaries. Benchmarked on layered intercalation compounds through four rigorous extrapolation scenarios and a temporal Materials Project split, our framework achieves 68% error reduction (RMSE: 0.881 vs. 2.778 eV/atom) versus end-to-end GNNs for extrapolation. Failure analysis reveals extrapolation succeeds for continuous chemical space but fails for discontinuous space, establishing clear design principles. Validated on Fermi energy prediction, this framework is immediately deployable using existing pretrained models, requiring no architectural innovations-transforming ML-driven materials discovery.",
+        "url": "http://arxiv.org/abs/2602.18054v1",
+        "published": "2026-02-20",
+        "zh_abstract": "机器学习已彻底变革材料性能预测领域，但在需要突破训练分布范围进行预测时（这正是发现新型材料所需的关键能力）却会出现严重失效。图神经网络（GNN）之所以出现这种崩溃，是因为端到端训练本质上将学习到的表征与目标性能分布相耦合，阻碍了真正的泛化外推。我们证明，解耦迁移学习——将预训练的GNN特征提取器与简单回归器分离——能够突破这一障碍。预训练特征提供可迁移的结构知识，而简单回归器通过保持训练边界外已学习的变化趋势实现平滑外推。通过对层状插层化合物进行四项严格外推场景测试及时间维度的Materials Project数据集划分验证，我们的框架在外推任务中相较端到端GNN实现了68%的误差降低（RMSE：0.881 vs. 2.778 eV/原子）。失效分析表明，该方法在连续化学空间中能成功外推，但在非连续空间中失效，由此确立了清晰的设计原则。经费米能预测验证，该框架可直接利用现有预训练模型部署，无需架构创新——这将彻底改变机器学习驱动的材料发现范式。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2602.17489",
+        "title": "Prediction of room-temperature two-dimensional $π$-electron half-metallic ferrimagnets",
+        "abstract": "We propose a strategy to obtain conducting organic materials with fully spin-polarized Fermi surface, lying at a singular flat band, with antiferromagnetically coupled magnetic moments that reside in pi-orbitals of nanographenes. We consider a honeycomb crystal whose unit cell combines two different molecules with S=1/2: an Aza-3-Triangulene, a molecule with orbital degeneracy, and a 2-Triangulene. The analyzed system is half-metallic with a ferrimagnetic order, presenting a zero net total magnetic moment per unit cell. We combine density functional theory calculations with a Hubbard model Hamiltonian to compute the magnetic interactions, the bands, the intrinsic Anomalous Hall effect, and the collective spin excitations. We obtain very large intermolecular exchange couplings, in the range of 50 meV, which ensures room temperature stability. When the magnetization is off-plane, intrinsic spin orbit coupling in graphene opens up a topological gap that, despite being very small, leads to a quantized Hall conductance in the tens of mK range. Above 1 Kelvin, the system will behave like a half-metal with fully compensated magnetic moments, thereby combining two characteristics that make it ideal for spintronics applications.",
+        "url": "http://arxiv.org/abs/2602.17489v1",
+        "published": "2026-02-19",
+        "zh_abstract": "本文提出一种策略，用于制备具有全自旋极化费米面的导电有机材料。该费米面位于奇异平带处，其磁性矩以反铁磁方式耦合并定域于纳米石墨烯的π轨道中。我们构建了一种蜂窝状晶体，其晶胞包含两种不同的S=1/2分子：具有轨道简并的Aza-3-Triangulene和2-Triangulene。分析表明该体系呈半金属性且具有亚铁磁序，每个晶胞净磁矩为零。我们结合密度泛函理论计算与哈伯德模型哈密顿量，计算了磁相互作用、能带结构、内禀反常霍尔效应及集体自旋激发。研究获得了高达50 meV量级的超大分子间交换耦合，这确保了体系的室温稳定性。当磁化方向偏离平面时，石墨烯中的内禀自旋轨道耦合会打开拓扑能隙。尽管能隙极小，但在数十毫开尔文温区仍能实现量子化霍尔电导。在1开尔文以上温区，该体系将表现为具有完全补偿磁矩的半金属，这种双重特性使其成为自旋电子学应用的理想候选材料。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2602.16908",
         "title": "Multi-objective optimization and quantum hybridization of equivariant deep learning interatomic potentials on organic and inorganic compounds",
         "abstract": "Allegro is a machine learning interatomic potential (MLIP) model designed to predict atomic properties in molecules using E(3) equivariant neural networks. When training this model, there tends to be a trade-off between accuracy and inference time. For this reason we apply multi-objective hyperparameter optimization to the two objectives. Additionally, we experiment with modified architectures by making variants of Allegro some by adding strictly classical multi-layer perceptron (MLP) layers and some by adding quantum-classical hybrid layers. We compare the results from QM9, rMD17-aspirin, rMD17-benzene and our own proprietary dataset consisting of copper and lithium atoms. As results, we have a list of variants that surpass the Allegro in accuracy and also results which demonstrate the trade-off with inference times.",
