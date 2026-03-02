@@ -18,7 +18,9 @@
 -   **核心AI模型**
     -   E(3)等变网络, GNNs
     -   生成模型与逆向设计
-
+-   **科学智能体 Agent**
+    -   智能体 Agent
+    -   科学助手 Pilot
 #### **轨道二：传统计算与潜在机会 (Traditional Methods & Opportunities)**
 
 -   **核心研究体系**
