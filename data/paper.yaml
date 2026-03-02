@@ -11,10 +11,21 @@ category_list:
   - cond-mat.dis-nn      # Disordered Systems and Neural Networks (特定体系)
   - physics.comp-ph      # Computational Physics (最重要补充: 计算方法/模拟)
   - physics.chem-ph      # Chemical Physics (重要补充: ML势函数/分子模拟)
-  - cs.LG                # Machine Learning (核心)
   - quant-ph             # Quantum Physics (量子体系/算法)
+  - cs.LG                # Machine Learning (核心)
+  - cs.AI                # Artificial Intelligence (人工智能综合)
+  - cs.CL                # Computation and Language (自然语言处理，大模型发文主阵地)
+  - cs.MA                # Multiagent Systems (多智能体系统)
 
 keyword_list:
+  - LLM Agent
+  - Autonomous Agent
+  - Multi-Agent
+  - Scientific Agent
+  - AI Scientist
+  - Tool Learning        
+  - Automated Research
+  - Workflow
   - Machine Learning
   - Deep Learning
   - Neural Network

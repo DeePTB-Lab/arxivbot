@@ -18,9 +18,12 @@
 -   **核心AI模型**
     -   E(3)等变网络, GNNs
     -   生成模型与逆向设计
--   **科学智能体 Agent**
-    -   智能体 Agent
-    -   科学助手 Pilot
+-   **科学智能体 Agent 与自动化**
+    -   基于 LLM 的全流程科研助手 (AI Scientist)
+    -   多智能体协作框架 (Multi-Agent framework for Science)
+    -   科学计算与分析平台调用 (Tool Learning: 自动化执行各类计算模拟软件、实验控制或分析 API)
+    -   自我验证与自动化实验设计 (Self-Reflection / Autonomous Lab)
+
 #### **轨道二：传统计算与潜在机会 (Traditional Methods & Opportunities)**
 
 -   **核心研究体系**
