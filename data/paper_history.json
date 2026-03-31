@@ -1,5 +1,38 @@
 [
     {
+        "id": "2603.28012",
+        "title": "A Comparative Study of Molecular Dynamics Approaches for Simulating Ionic Conductivity in Solid Lithium Electrolytes",
+        "abstract": "Accurate prediction of ionic conductivity is critical for the design of high-performance solid-state electrolytes in next-generation batteries. We benchmark molecular dynamics (MD) approaches for computing ionic conductivity in 21 lithium solid electrolytes for which experimental ionic conductivity has been previously reported in the literature. In particular, we compare simulations driven by density functional theory (DFT) and by universal machine-learning interatomic potentials (uMLIPs), namely a MACE foundation model. We find comparable performance between DFT and MACE, despite MACE on one GPU more than 350 times faster than DFT on a 64-CPU node. The framework developed here is designed to enable systematic comparisons with additional uMLIPs and fine-tuned models in future work.",
+        "url": "http://arxiv.org/abs/2603.28012v1",
+        "published": "2026-03-30",
+        "zh_abstract": "准确预测离子电导率对于设计下一代电池中的高性能固态电解质至关重要。我们对计算21种锂固态电解质离子电导率的分子动力学方法进行了基准测试，这些电解质的实验离子电导率先前已在文献中报道。具体而言，我们比较了基于密度泛函理论驱动的模拟与基于通用机器学习原子间势驱动的模拟，后者采用的是MACE基础模型。我们发现DFT与MACE性能相当，尽管MACE在单GPU上的计算速度比DFT在64核CPU节点上快350倍以上。本文开发的框架旨在为未来工作中与其他通用机器学习原子间势及微调模型进行系统性比较提供支持。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2603.27430",
+        "title": "Neural operator accelerated atomistic to continuum concurrent multiscale simulations of viscoelasticity",
+        "abstract": "We present a neural-operator-accelerated concurrent multiscale framework that couples atomistic simulations with continuum finite-element analysis for history-dependent materials, thereby making atomistic-continuum multiscale simulations of viscoelastic materials tractable. The approach replaces direct molecular dynamics (MD) evaluation of the constitutive response with a Recurrent Neural Operator (RNO) surrogate trained on atomistic simulations. The surrogate learns the strain-history-to-stress operator from molecular dynamics simulations and provides a discretization-independent approximation of the atomistic constitutive mapping, enabling efficient evaluation of stresses and latent internal variables at each quadrature point. The framework is implemented within an explicit finite-element solver, where the constitutive update reduces to inexpensive operator evaluations rather than repeated MD solves. Memory effects are represented through learned internal states, and transfer learning across temperature enables the surrogate to capture thermally dependent viscoelastic behavior. The method is assessed using polyurea through cyclic loading, Taylor impact, and plate impact simulations and compared with an experimentally calibrated viscoelastic polyurea model and a Johnson-Cook model. The neural-operator surrogate reproduces correct viscoelastic response while enabling atomistically informed dynamic simulations at scales that are not tractable with direct MD-FEM coupling.",
+        "url": "http://arxiv.org/abs/2603.27430v1",
+        "published": "2026-03-28",
+        "zh_abstract": "本文提出一种神经算子加速的并发多尺度框架，该框架将原子尺度模拟与连续介质有限元分析相耦合，用于模拟具有历史依赖性的材料，从而使粘弹性材料的原子‑连续介质多尺度模拟变得可行。该方法采用基于原子模拟训练的循环神经算子替代本构响应的直接分子动力学计算。该代理模型从分子动力学模拟中学习应变历史‑应力算子，并提供与离散化无关的原子尺度本构映射近似，从而能够高效计算每个积分点处的应力与潜在内部变量。该框架在显式有限元求解器中实现，其本构更新简化为廉价的算子求值，而非重复的分子动力学求解。记忆效应通过学习得到的内部状态表示，跨温度的迁移学习使代理模型能够捕捉温度依赖的粘弹性行为。通过循环加载、泰勒冲击和平板冲击模拟对聚脲材料进行评估，并与实验标定的粘弹性聚脲模型及Johnson-Cook模型进行对比。神经算子代理模型在重现正确粘弹性响应的同时，实现了基于原子信息的大尺度动态模拟，其计算规模是直接分子动力学‑有限元耦合方法无法实现的。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
+        "id": "2603.27195",
+        "title": "AutoMS: Multi-Agent Evolutionary Search for Cross-Physics Inverse Microstructure Design",
+        "abstract": "Designing microstructures that satisfy coupled cross-physics objectives is a fundamental challenge in material science. This inverse design problem involves a vast, discontinuous search space where traditional topology optimization is computationally prohibitive, and deep generative models often suffer from \"physical hallucinations,\" lacking the capability to ensure rigorous validity. To address this limitation, we introduce AutoMS, a multi-agent neuro-symbolic framework that reformulates inverse design as an LLM-driven evolutionary search. Unlike methods that treat LLMs merely as interfaces, AutoMS integrates them as \"semantic navigators\" to initialize search spaces and break local optima, while our novel Simulation-Aware Evolutionary Search (SAES) addresses the \"blindness\" of traditional evolutionary strategies. Specifically, SAES utilizes simulation feedback to perform local gradient approximation and directed parameter updates, effectively guiding the search toward physically valid Pareto frontiers. Orchestrating specialized agents (Manager, Parser, Generator, and Simulator), AutoMS achieves a state-of-the-art 83.8\\% success rate on 17 diverse cross-physics tasks, nearly doubling the performance of traditional NSGA-II (43.7\\%) and significantly outperforming ReAct-based LLM baselines (53.3\\%). Furthermore, our hierarchical architecture reduces total execution time by 23.3\\%. AutoMS demonstrates that autonomous agent systems can effectively navigate complex physical landscapes, bridging the gap between semantic design intent and rigorous physical validity.",
+        "url": "http://arxiv.org/abs/2603.27195v1",
+        "published": "2026-03-28",
+        "zh_abstract": "设计满足跨物理场耦合目标的微观结构是材料科学中的一个基础性挑战。该逆向设计问题涉及一个庞大且不连续的搜索空间，传统拓扑优化方法在此面临计算瓶颈，而深度生成模型则常出现“物理幻觉”，无法保证严格的物理有效性。为突破这一限制，我们提出了AutoMS，一个多智能体神经符号框架，将逆向设计重新构建为由大语言模型驱动的进化搜索。与仅将大语言模型作为接口的方法不同，AutoMS将其集成为“语义导航器”，以初始化搜索空间并打破局部最优，而我们提出的新型仿真感知进化搜索则解决了传统进化策略的“盲目性”问题。具体而言，SAES利用仿真反馈进行局部梯度近似和定向参数更新，有效地引导搜索朝向物理有效的帕累托前沿。通过协调多个专用智能体（管理器、解析器、生成器和模拟器），AutoMS在17项不同的跨物理场任务上实现了83.8%的最新成功率，几乎是传统NSGA-II方法（43.7%）性能的两倍，并显著优于基于ReAct的大语言模型基线方法（53.3%）。此外，我们的分层架构将总执行时间减少了23.3%。AutoMS证明了自主智能体系统能够有效探索复杂的物理设计空间，从而在语义设计意图与严格物理有效性之间架起桥梁。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2603.25330",
         "title": "Machine-Learned Interatomic Potentials for Predicting Physicochemical Properties of Molten Metal-Salt Systems for Calcium Electrolysis",
         "abstract": "The design of efficient electrolysis devices for pure metal production requires accurate data on the properties of the melts used in the process. This work focuses on two key systems for calcium production: the molten Ca-Cu alloy and the CaCl$_2$-KCl electrolyte. High-temperature experiments are often expensive and time-consuming; however, we demonstrate that molecular dynamics (MD) simulations driven by machine-learned Moment Tensor Potentials (MTPs), trained on highly accurate density functional theory data, offer an effective and accurate alternative. Our MTP-driven MD simulations accurately reproduce the structural, thermodynamic, and transport properties across a range of temperatures and compositions relevant to electrolysis systems. We report calculated densities, radial distribution functions, heat capacities, thermal conductivities, ionic conductivities (for the electrolyte), viscosities, and diffusion coefficients, with deviations from experimental data within 20%. The strong agreement between calculations and experiments validates the proposed approach, establishing a robust framework for the computational exploration and optimization of liquid systems in metallurgical applications.",
