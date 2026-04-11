@@ -1,5 +1,16 @@
 [
     {
+        "id": "2604.06076",
+        "title": "The HTC-Claw: Automating Discovery through High-Throughput Computational Campaigns",
+        "abstract": "With the advancement of the Materials Genome Initiative, high-throughput computation has become central to accelerating materials discovery. However, conventional first-principles workflows are cumbersome and error-prone. Existing high-throughput tools, while efficient at batch job submission, lack intelligence: they cannot automatically plan tasks based on scientific objectives or dynamically adapt workflows according to intermediate results. To address these limitations, this paper proposes and implements HTC-Claw, an intelligent high-throughput computational platform built upon the OpenClaw framework. The key innovations of HTC-Claw are: 1) An agent-based framework for automatic decomposition of high-level research goals into parallelizable task sets; 2) A closed-loop execution engine that integrates real-time analysis and reporting; 3) Adaptive decision-making and workflow iteration capabilities based on intermediate results; and 4) A decoupled, modular architecture that separates the scheduling system from functional modules, enhancing extensibility and robustness. Case studies demonstrate that HTC-Claw enables an intelligent, end-to-end workflow from user intent to final reporting in materials exploration",
+        "url": "http://arxiv.org/abs/2604.06076v1",
+        "published": "2026-04-07",
+        "zh_abstract": "随着材料基因组计划的推进，高通量计算已成为加速材料发现的核心手段。然而，传统的第一性原理计算流程繁琐且易出错。现有高通量工具虽能高效提交批量作业，但缺乏智能性：无法根据科学目标自动规划任务，亦不能依据中间结果动态调整工作流。为应对这些局限，本文提出并实现了HTC-Claw，这是一个基于OpenClaw框架构建的智能高通量计算平台。HTC-Claw的核心创新包括：1）基于智能体（agent）的框架，可将高层次研究目标自动分解为可并行执行的任务集；2）集成实时分析与报告的闭环执行引擎；3）基于中间结果的自适应决策与工作流迭代能力；4）解耦的模块化架构，将调度系统与功能模块分离，增强了可扩展性与鲁棒性。案例研究表明，HTC-Claw能够实现从用户意图到最终报告的材料探索智能端到端工作流。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2604.08143",
         "title": "Equivariant Many-body Message Passing Interatomic Potentials for Magnetic Materials",
         "abstract": "Magnetism governs key properties of materials used in energy, data storage, and spintronic technologies, yet its complex coupling to lattice and electronic degrees of freedom challenges conventional first-principles approaches. We introduce an equivariant message-passing graph neural network that embeds atomic magnetic moments as explicit degrees of freedom, enabling the learning of magnetic interactions beyond collinear approximations. The model learns physically consistent and transferable representations of magnetic behaviour and can incorporate spin-orbit coupling, achieving near density-functional-theory accuracy with strong data efficiency across diverse magnetic systems by fine-tuning from a pre-trained model. Applications to structural transformations, finite-temperature magnetic phenomena, and materials screening for strongly spin-orbit coupled materials demonstrate transferable magnetic behaviour, establishing a practical foundation for data-driven, high-throughput discovery of complex magnetic materials.",
