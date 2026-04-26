@@ -1,5 +1,16 @@
 [
     {
+        "id": "2604.21807",
+        "title": "Modeling High Entropy Alloys' Mechanical Property through Natural Language-Derived Descriptors",
+        "abstract": "Processing treatments of alloys, despite being influential to alloy properties, are often neglected in machine-learning aided alloy designs due to the difficulties in expressing this information. We investigated the expressiveness of transformer embeddings through synthesized annealing processing treatment text and verified that embeddings could be utilized to reconstruct the processing parameters of alloys effectively with an R2>0.99. We then utilized the vector representations of alloys' processing treatment descriptions as descriptors to model high-entropy alloys' hardness and achieved a 20% improvement in prediction, verifying that natural language-derived descriptors of processing treatment information could be utilized to improve prediction of alloy properties.",
+        "url": "http://arxiv.org/abs/2604.21807v1",
+        "published": "2026-04-23",
+        "zh_abstract": "合金的加工处理虽对其性能有重要影响，但由于这类信息难以有效表达，在基于机器学习的合金设计过程中常被忽视。我们通过合成的退火加工处理文本研究了Transformer嵌入的表达能力，验证了嵌入向量可用于有效重建合金的加工参数（R²>0.99）。随后，我们利用合金加工处理描述的向量表示作为描述符来建模高熵合金的硬度，实现了预测精度20%的提升，证明了基于自然语言衍生的加工处理信息描述符可用于改善合金性能的预测。",
+        "introduction": null,
+        "conclusion": null,
+        "deep_summary": null
+    },
+    {
         "id": "2604.19383",
         "title": "Multimodal Transformer for Sample-Aware Prediction of Metal-Organic Framework Properties",
         "abstract": "Metal-organic frameworks (MOFs) are a major target of machine-learning-based property prediction, yet most models assume that a single framework representation maps to a single property value. This assumption becomes problematic for experimental MOFs, where samples reported as the same framework can exhibit different properties because of differences in crystallinity, phase purity, defects, and other sample-dependent factors. Here we introduce Experimental X-ray Diffraction Integrated Transformer (EXIT), a multimodal transformer for sample-aware prediction of MOF properties that combines MOFid with X-ray diffraction (XRD). In EXIT, MOFid encodes MOF identity, whereas XRD provides complementary information about the experimentally realized sample state. EXIT is pre-trained on one million hypothetical MOFs with simulated XRD to learn transferable representations, leading to improved downstream performance relative to existing approaches. EXIT is fine-tuned on literature-derived experimental datasets for surface area and pore volume prediction. Incorporating experimental XRD improves predictive performance relative to models without experimental XRD, and attention analysis and sample-level case studies further show that EXIT assigns different predictions to samples sharing the same MOF identity when their XRD patterns differ. These results establish a practical step from framework-aware to sample-aware MOF property prediction and highlight the value of incorporating experimental characterization into porous materials informatics.",
